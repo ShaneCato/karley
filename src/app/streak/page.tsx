@@ -138,7 +138,7 @@ export default function StreakPage() {
           🔥 {streak} in a row! Keep going!
         </div>
       )}
-      <FlashCard question={q} onCorrect={handleCorrect} onMiss={handleMiss} />
+      <FlashCard key={q.id} question={q} onCorrect={handleCorrect} onMiss={handleMiss} />
     </div>
   );
 }

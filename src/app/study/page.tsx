@@ -127,7 +127,7 @@ export default function StudyPage() {
           style={{ width: `${((index) / deck.length) * 100}%` }}
         />
       </div>
-      <FlashCard question={q} onCorrect={handleCorrect} onMiss={handleMiss} />
+      <FlashCard key={q.id} question={q} onCorrect={handleCorrect} onMiss={handleMiss} />
     </div>
   );
 }

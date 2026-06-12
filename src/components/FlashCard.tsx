@@ -1,7 +1,7 @@
 "use client";
 
 import { Category, Question } from "@/types";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { playFlip } from "@/lib/sounds";
 
 const CATEGORY_BG: Record<Category, string> = {
@@ -27,10 +27,6 @@ export default function FlashCard({
   extraBack,
 }: Props) {
   const [flipped, setFlipped] = useState(false);
-
-  useEffect(() => {
-    setFlipped(false);
-  }, [question.id]);
 
   function flip() {
     setFlipped((f) => !f);
