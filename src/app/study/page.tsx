@@ -11,8 +11,8 @@ import { GameFilters } from "@/types";
 
 export default function StudyPage() {
   const [filters, setFilters] = useState<GameFilters>({
-    categories: [...CATEGORIES],
-    difficulties: [...DIFFICULTIES],
+    categories: [],
+    difficulties: [],
   });
   const [deck, setDeck] = useState<ReturnType<typeof getQuestions> | null>(null);
   const [index, setIndex] = useState(0);

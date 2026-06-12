@@ -14,8 +14,8 @@ const QUESTION_COUNT = 10;
 
 export default function TimedPage() {
   const [filters, setFilters] = useState<GameFilters>({
-    categories: [...CATEGORIES],
-    difficulties: [...DIFFICULTIES],
+    categories: [],
+    difficulties: [],
   });
   const [timerSetting, setTimerSetting] = useState<TimerSetting>(20);
   const [phase, setPhase] = useState<"setup" | "playing" | "done">("setup");

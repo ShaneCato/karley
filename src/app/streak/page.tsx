@@ -11,8 +11,8 @@ import { GameFilters, Question } from "@/types";
 
 export default function StreakPage() {
   const [filters, setFilters] = useState<GameFilters>({
-    categories: [...CATEGORIES],
-    difficulties: [...DIFFICULTIES],
+    categories: [],
+    difficulties: [],
   });
   const [phase, setPhase] = useState<"setup" | "playing" | "dead">("setup");
   const [deck, setDeck] = useState<Question[]>([]);

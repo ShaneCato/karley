@@ -91,6 +91,9 @@ export default function FilterPanel({ filters, onChange, questionCount }: Props)
       </div>
       <p className="text-sm text-gray-500 font-medium">
         {questionCount} question{questionCount !== 1 ? "s" : ""} available
+        {filters.categories.length === 0 && filters.difficulties.length === 0 && (
+          <span className="ml-1 text-gray-400">(all categories &amp; difficulties)</span>
+        )}
       </p>
     </div>
   );
